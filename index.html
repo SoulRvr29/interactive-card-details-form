@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <title>Frontend Mentor | Interactive card details form</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main>
+      <section class="cardSection">
+        <div class="cardFront">
+          <div class="cardLogo">
+            <img src="images/card-logo.svg" alt="card logo" />
+          </div>
+          <div class="cardInfo">
+            <div class="cardNumber">0000 0000 0000 0000</div>
+            <div class="cardNameAndExp">
+              <div class="cardName">Jane Appleseed</div>
+              <div class="expDateDiv">
+                <div class="expDateM">00</div>
+                /
+                <div class="expDateY">00</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="cardBack"><div class="cardCvc">000</div></div>
+      </section>
+      <section class="formSection">
+        <form action="#">
+          <label for="name">Cardholder Name</label><br />
+          <input
+            type="text"
+            name="name"
+            id="name"
+            placeholder="e.g. Jane Appleseed"
+            maxlength="22"
+          /><br />
+          <div class="nameErr error">Can't be blank</div>
+          <label for="number">Card Number</label><br />
+          <input
+            type="text"
+            name="number"
+            id="number"
+            placeholder="e.g. 1234 5678 9123 0000"
+            maxlength="16"
+          />
+          <div class="numberErr error">Wrong format, numbers only</div>
+          <div class="expAndCvc">
+            <div class="expDate">
+              <label for="exp">Exp. Date (MM/YY)</label><br />
+              <div class="expInputs">
+                <input
+                  type="text"
+                  name="mm"
+                  id="expM"
+                  placeholder="MM"
+                  maxlength="2"
+                />
+                <input
+                  type="text"
+                  name="yy"
+                  id="expY"
+                  placeholder="YY"
+                  maxlength="2"
+                />
+                <br />
+              </div>
+              <div class="dateErr error">Can't be blank</div>
+            </div>
+            <div class="cvc">
+              <label for="cvc">CVC</label><br />
+              <input
+                type="text"
+                name="cvc"
+                id="cvc"
+                placeholder="e.g. 123"
+                maxlength="3"
+              />
+              <br />
+              <div class="cvcErr error">Can't be blank</div>
+            </div>
+          </div>
+          <button class="confirm">Confirm</button>
+        </form>
+        <div class="completeSection">
+          <img src="images/icon-complete.svg" alt="icon complete" />
+          <h1>Thank you!</h1>
+          <p>We've added your card details</p>
+          <button class="continue">Continue</button>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="footerInfo">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by <a href="#">SoulRvr</a>.
+      </div>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>

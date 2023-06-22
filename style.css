@@ -1,0 +1,278 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+img {
+  max-width: 100%;
+  display: block;
+}
+:root {
+  --active-input-border1: hsl(249, 99%, 64%);
+  --active-input-border2: hsl(278, 94%, 30%);
+  --input-errors: hsl(0, 100%, 66%);
+
+  --White: hsl(0, 0%, 100%);
+  --Light-grayish-violet: hsl(270, 3%, 87%);
+  --Dark-grayish-violet: hsl(279, 6%, 55%);
+  --Very-dark-violet: hsl(278, 68%, 11%);
+}
+body {
+  min-height: 100vh;
+  display: grid;
+  place-content: center;
+  font-size: 1.125rem;
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 500;
+  background-image: url(images/bg-main-desktop.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+/**************/
+/***  MAIN  ***/
+/**************/
+main {
+  display: flex;
+  gap: 3rem;
+  min-height: 30rem;
+}
+/**********************/
+/***  CARD SECTION  ***/
+/**********************/
+.cardSection {
+  gap: 0rem;
+  max-width: 640px;
+  width: 100%;
+  display: grid;
+  color: var(--White);
+  text-transform: uppercase;
+  font-size: 0.9rem;
+}
+.cardFront {
+  margin: 1rem;
+  background-image: url(images/bg-card-front.png);
+  background-size: contain;
+  width: 447px;
+  height: 245px;
+  padding: 1.5rem 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 21px 39px 91px 0px rgba(0, 0, 0, 0.26);
+  border-radius: 0.8rem;
+}
+.cardInfo {
+  display: grid;
+  gap: 1.5rem;
+}
+.cardNumber {
+  font-size: 1.7rem;
+  letter-spacing: 4px;
+}
+.cardNameAndExp {
+  letter-spacing: 2px;
+  display: flex;
+  justify-content: space-between;
+}
+.cardBack {
+  margin: 1rem;
+  background-image: url(images/bg-card-back.png);
+  background-size: contain;
+  width: 447px;
+  height: 245px;
+  justify-self: flex-end;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 3.5rem;
+  box-shadow: 21px 39px 91px 0px rgba(0, 0, 0, 0.26);
+  border-radius: 0.8rem;
+}
+.cvc {
+  letter-spacing: 2px;
+}
+.expDateDiv {
+  display: flex;
+}
+/**********************/
+/***  FORM SECTION  ***/
+/**********************/
+.formSection {
+  max-width: 600px;
+  width: 100%;
+  display: grid;
+  place-content: center;
+}
+form {
+  padding: 4rem;
+}
+label {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  color: var(--Very-dark-violet);
+  letter-spacing: 2px;
+}
+input {
+  outline: none;
+  border: 1px solid var(--Light-grayish-violet);
+  font-weight: 500;
+  color: var(--Very-dark-violet);
+}
+input:focus {
+  border-color: var(--active-input-border2);
+  color: var(--Very-dark-violet);
+}
+input,
+button {
+  font-size: 1.125rem;
+  font-family: "Space Grotesk", sans-serif;
+  width: 100%;
+  padding: 0.7rem;
+  margin-bottom: 0.5rem;
+  margin-top: 0.3rem;
+  border-radius: 0.5rem;
+}
+input:hover,
+button:hover {
+  cursor: pointer;
+}
+button {
+  border: none;
+  background-color: var(--Very-dark-violet);
+  color: var(--Light-grayish-violet);
+  padding: 1rem;
+  margin-top: 1.5rem;
+}
+.expAndCvc {
+  display: flex;
+  gap: 0.5rem;
+}
+.expDate,
+.cvc {
+  max-width: 50%;
+}
+.expInputs {
+  display: flex;
+  gap: 0.7rem;
+}
+
+.error {
+  font-size: 0.7rem;
+  color: var(--input-errors);
+  letter-spacing: 0;
+  visibility: hidden;
+  margin-bottom: 0.5rem;
+}
+/************************/
+/*** COMPLETE SECTION ***/
+/************************/
+.completeSection {
+  position: absolute;
+  max-width: 500px;
+  width: 100%;
+  display: none;
+  visibility: visible;
+  place-content: center;
+  padding: 2rem;
+  justify-items: center;
+  gap: 1rem;
+}
+.completeSection img {
+  width: 4.5rem;
+  margin-bottom: 1rem;
+}
+.completeSection h1 {
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: var(--Very-dark-violet);
+  font-weight: 200;
+}
+.completeSection p {
+  font-size: 1rem;
+  color: var(--Dark-grayish-violet);
+}
+.completeSection button {
+  width: 100%;
+}
+/**************/
+/*** FOOTER ***/
+/**************/
+footer {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+footer a:hover {
+  color: rgb(218, 98, 0);
+}
+.footerInfo {
+  position: fixed;
+  bottom: 0;
+  display: inline-block;
+  font-size: 11px;
+  text-align: center;
+  color: hsl(228, 45%, 44%);
+  background-color: rgb(255, 255, 255);
+  padding: 0.3rem 0.6rem;
+  border: 2px solid rgb(210, 222, 243);
+  border-radius: 0.3rem;
+}
+
+/*******************/
+/*** MEDIA QUERY ***/
+/*******************/
+@media screen and (max-width: 940px) {
+  body {
+    background-image: url(images/bg-main-mobile.png);
+    background-position-y: -35rem;
+    background-size: cover;
+  }
+  main {
+    flex-direction: column;
+  }
+  .cardFront,
+  .cardBack {
+    position: absolute;
+    width: 290px;
+    height: 159px;
+    padding: 1.2rem 1rem;
+  }
+  .cardFront {
+    top: 8.2rem;
+    z-index: 1;
+  }
+  .cardNumber {
+    font-size: 1rem;
+  }
+  .cardNameAndExp {
+    font-size: 0.6rem;
+  }
+  .cardCvc {
+    font-size: 0.6rem;
+    margin-right: 1rem;
+  }
+  .cardFront img {
+    width: 3.5rem;
+  }
+  .cardBack {
+    top: 2.5rem;
+  }
+  form {
+    margin-top: 2rem;
+    padding: 1.5rem;
+  }
+  input {
+    margin: 0;
+    margin-top: 0.3rem;
+  }
+  .formSection {
+    position: relative;
+    top: 6rem;
+  }
+}
+@media screen and (max-width: 332px) {
+  label {
+    font-size: 0.5rem;
+  }
+}
