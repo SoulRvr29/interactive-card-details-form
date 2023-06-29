@@ -62,7 +62,7 @@ confirmBtn.addEventListener("click", () => {
     cardExpM.style = "border-color: var(--Light-grayish-violet)";
     cardExpY.style = "border-color: var(--Light-grayish-violet)";
   }
-  if (!/^\d{1,}$/g.test(cardCvc.value)) {
+  if (!/^\d{3}$/g.test(cardCvc.value)) {
     cvcErr.style = "visibility: visible";
     cardCvc.style = "border-color: var(--input-errors)";
   } else {
